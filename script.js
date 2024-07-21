@@ -19,7 +19,7 @@ function renderCountry(data, className = '') {
   </div>
 </article>
   `;
-  //https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML?retiredLocale=de
+
   countriesContainer.insertAdjacentHTML('beforeend', html);
   countriesContainer.style.opacity = 1;
 }
@@ -61,14 +61,14 @@ async function whoAmI(country) {
   }
 }
 
-// clear country function
+
 function clearCountries() {
   let countriesList = document.getElementById('countryList');
   countriesList.innerHTML = '';
   countryName.value = '';
 }
 
-//Nachbar anzeigen
+
 var btnListNeighbours = document.getElementById('listNeighbours');
 btnListNeighbours.addEventListener('click', () => {
   countryValue = countryName.value.toLowerCase();
@@ -77,6 +77,5 @@ btnListNeighbours.addEventListener('click', () => {
   renderCountry();
 });
 
-//clear country
 var btnClearCountries = document.getElementById('clearCountries');
 btnClearCountries.addEventListener('click', clearCountries);
